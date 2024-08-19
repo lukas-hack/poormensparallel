@@ -1,0 +1,19 @@
+v 1.0.0
+
+d Allows running multiple versions of Stata to run code in parallel / exploit more CPUs with Stata SE 
+d
+d Tested in Stata: 18
+d
+d Required packages:
+d 	confirmdir
+d
+d Distribution-Date: 20240819
+
+f ado/parallel_add.ado
+f ado/parallel_parse.ado
+f ado/parallel_setdir.ado
+f ado/parallel_aux_check.ado
+f help/parallel_add.sthlp
+f help/parallel_parse.sthlp
+f help/parallel_setdir.sthlp
+f help/parallel_aux_check.sthlp
