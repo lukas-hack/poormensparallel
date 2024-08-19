@@ -1,5 +1,5 @@
-cap program drop parallel_aux_check 
-program define parallel_aux_check , rclass 
+cap program drop pmp_aux_check 
+program define pmp_aux_check , rclass 
 	syntax, path(string)
 
 	confirmdir "`path'"

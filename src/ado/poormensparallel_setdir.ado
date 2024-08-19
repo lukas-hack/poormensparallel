@@ -1,5 +1,5 @@
-cap program drop parallel_setdir
-program define parallel_setdir, rclass
+cap program drop pmp_setdir
+program define pmp_setdir, rclass
 	syntax , [dirname(string)  replace ]
 	
 	* Set default folder name in current wd if not specified

@@ -1,5 +1,5 @@
-cap program drop parallel_parse
-program define parallel_parse, rclass
+cap program drop pmp_parse
+program define pmp_parse, rclass
 
 	syntax , [doname(string) dirname(string) replace runparallel]
 

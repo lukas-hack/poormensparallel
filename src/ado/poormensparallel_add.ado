@@ -1,5 +1,5 @@
-cap program drop parallel_add
-program define parallel_add, rclass
+cap program drop pmp_add
+program define pmp_add, rclass
     syntax, input(string)  [clearparallel continuejob header clearheader preserve(string)] 
 	* Job strings	
 	if "`header'" != "header" {
