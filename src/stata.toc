@@ -1,5 +1,9 @@
-v 1
-p ado/poormensparallel_add 		poormensparallel_add
-p ado/poormensparallel_aux_check 	poormensparallel_aux_check
-p ado/poormensparallel_parse 		poormensparallel_parse
-p ado/poormensparallel_setdir 		poormensparallel_setdir
+poormensparallel.pkg
+ado/parallel_add.ado
+ado/parallel_parse.ado
+ado/parallel_setdir.ado
+ado/parallel_aux_check.ado
+help/parallel_add.sthlp
+help/parallel_parse.sthlp
+help/parallel_setdir.sthlp
+help/parallel_aux_check.sthlp
