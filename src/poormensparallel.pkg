@@ -9,11 +9,11 @@ d 	confirmdir
 d
 d Distribution-Date: 20240819
 
-f ado/parallel_add.ado
-f ado/parallel_parse.ado
-f ado/parallel_setdir.ado
-f ado/parallel_aux_check.ado
-f help/parallel_add.sthlp
-f help/parallel_parse.sthlp
-f help/parallel_setdir.sthlp
-f help/parallel_aux_check.sthlp
+f ado/pmp_add.ado
+f ado/pmp_parse.ado
+f ado/pmp_setdir.ado
+f ado/pmp_aux_check.ado
+f help/pmp_add.sthlp
+f help/pmp_parse.sthlp
+f help/pmp_setdir.sthlp
+f help/pmp_aux_check.sthlp
