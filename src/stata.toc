@@ -1,0 +1,5 @@
+v 1
+p ado/poormensparallel_add 		poormensparallel_add
+p ado/poormensparallel_aux_check 	poormensparallel_aux_check
+p ado/poormensparallel_parse 		poormensparallel_parse
+p ado/poormensparallel_setdir 		poormensparallel_setdir
