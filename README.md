@@ -1,7 +1,7 @@
-# Poor Mens' Parallel Stata Package
+# Poor Men's Parallel Stata Package
 
 ## What is it?
-By default Stata SE runs only one a single CPU but most computers have multiple CPUs. A common workaround is to let mutliple instances of Stata run at the same time. Running multiple instances simulatenously is automized in this package. It is the side product of a research project. Use at your own risk. 
+By default Stata SE runs only one a single CPU but most computers have multiple CPUs. A common (poor men's) workaround is to let mutliple instances of Stata run at the same time. Running multiple instances simulatenously is automized in this package. It is the side product of a research project. Use at your own risk. Alternatively, buy Stata MP.
 
 ## What are the capabilities?
 It can parallelize independent Stata commands. For example, it can run multiple regress (or any other Stata command) in parallel. It can NOT break up dependent Stata code, e.g. loops, unless the users finds a way to break the dependence. It can NOT work on multiple computers simultaneously - there are other packages. 
