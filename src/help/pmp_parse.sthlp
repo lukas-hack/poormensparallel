@@ -5,7 +5,7 @@ Title
     pmp_parse -- Parser that creates all files and runs current parallel strings
 
 Syntax
-    pmp_parse, [doname(string) dirname(string) replace runparallel]
+    pmp_parse, [doname(string) dirname(string) continuejob replace runparallel]
 
 Description
     Parses the input strings created by pmp_add to create (i) a master do-file (ii) individual do-files for each job, and (iii) a run_jobs.bat file that can run all jobs in parallel. All files are stored in directory dirname with corresponding subfolders for the job do-files (\dos\) and the log files which Stata creates when running the do-files (\log). Disclaimer: Run at own risk. This all works by running multiple instances of Stata via a batch script. Verify that all jobs were executed as desired is important because there will be no error messages in Stata (the version in which pmp_parse is executed). One can still consult the log files. Importantly, one needs to set the (absolute) path to the stata.exe in Stata global _parallel_stataexe (default is global _parallel_stataexe "C:\Program Files\Stata18\StataSE-64.exe").
@@ -15,6 +15,7 @@ Options
                          _master_parallel.do.
     dirname(string)      specifies the directory name where the files will be 
                          stored. Default is the current working directory.
+	continuejob			 Add new line of code to current job (default is to start a new job)
     replace              replaces existing files if specified.
     runparallel          runs the generated batch file to execute jobs in 
                          parallel. Without this option, one can manually start all jobs by starting run_jobs.bat
