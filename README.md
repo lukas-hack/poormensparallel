@@ -13,7 +13,16 @@ The user inputs the code to run in parallel. Then program creates a windows batc
 In the examples I tested on a 4 core thinkpad, it reduced runtime up to one third of the non-parallel code.
 
 ## Get started
-Type "net install poormensparallel, from("https://raw.githubusercontent.com/lukas-hack/poormensparallel/main/src")" in Stata to directly install.
+Type the following command in Stata directly to install
+```
+net install poormensparallel, from("https://raw.githubusercontent.com/lukas-hack/poormensparallel/main/src") 
+```
+I recommend to consult the help files after downloading 
+```
+help pmp_add
+help pmp_parse
+```
+A simple example can also be downloaded from here.
 
 ## Feedback
 Highly welcome. That said, I am not a software developer but an economist who thought that these pieces of code could be useful to others. If you find bugs, report them. You can also download the programs and modify them for your use case.
