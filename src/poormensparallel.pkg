@@ -1,4 +1,4 @@
-v 1.0.0
+v 1.0.1
 
 d Allows running multiple versions of Stata to run code in parallel / exploit more CPUs with Stata SE 
 d
@@ -7,7 +7,7 @@ d
 d Required packages:
 d 	confirmdir
 d
-d Distribution-Date: 20240819
+d Distribution-Date: 20240820
 
 f ado/pmp_add.ado
 f ado/pmp_parse.ado
