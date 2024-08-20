@@ -2,8 +2,7 @@
 help pmp_setdir
 -------------------------------------------------------------------------------
 Title
-    pmp_setdir -- Ensures that a directory is used or created where all 
-                       parallel stuff is stored
+    pmp_setdir -- Ensures that a directory is used or created where all parallel stuff is stored
 
 Syntax
     pmp_setdir, [dirname(string) replace]
@@ -20,8 +19,11 @@ Options
     replace            specifies that the directory should be replaced if it 
                        already exists.
 
-Examples
-    . pmp_setdir, dirname("parallel_jobs") replace
-    . pmp_setdir, dirname("parallel_jobs")
+Notes
+    - Not intended for use. Will be only called by pmp_parse.
+					   
+Author
+	Lukas Hack, ETH Zuerich 
+	https://lukas-hack.github.io/
 
 -------------------------------------------------------------------------------
