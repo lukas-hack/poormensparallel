@@ -5,7 +5,7 @@ program define pmp_setdir, rclass
 	* Set default folder name in current wd if not specified
 	if ("`dirname'" == "") local dirname _parallel
 	* Check if directory already exists / I can write this directory
-	parallel_aux_check, path("`dirname'")
+	pmp_aux_check, path("`dirname'")
 	if r(excode) == -1 {
 		di in red "No writing permission for stated path"
 		error 1

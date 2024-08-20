@@ -9,21 +9,20 @@ program define pmp_parse, rclass
 	
 	* Prepare directories
 	if "`dirname'" != "" {
-		parallel_setdir, dirname("`dirname'")
-		parallel_setdir, dirname("`dirname'\log")
-		parallel_setdir, dirname("`dirname'\dos")
+		pmp_setdir, dirname("`dirname'")
+		pmp_setdir, dirname("`dirname'\log")
+		pmp_setdir, dirname("`dirname'\dos")
 
 	} 
 	else {
-		parallel_setdir, dirname("log")
-		parallel_setdir, dirname("dos")
+		pmp_setdir, dirname("log")
+		pmp_setdir, dirname("dos")
 	}	
 
 	
 	* Parse parallel string to discet different jobs
-	di "`_parallel_string'"
+	// di "`_parallel_string'"
 	tokenize "`_parallel_string'", parse("<")
-	di 11111111111
 	
 	* Catch if too many jobs specified that violate loop range (loop range may be adjusted)
 	if "`100'" != "" {
