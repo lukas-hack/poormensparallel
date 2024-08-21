@@ -8,7 +8,8 @@ Syntax
 	pmp_add, input(string) [clearparallel continuejob header clearheader preserve(string)]
 
 Description
-	Adds strings containing the Stata code one wishes to execute in parallel. It adds job-strings or header-strings. The header will be executed before each parallel job-string. Importantly, note that characters ~ and ; may not be used in code strings because the program uses them internally to separate code lines and jobs when concatenating input strings. This does only apply to the direct code commands provided via input(); see Remark 3 below for a possible workaround.
+	Adds strings containing the Stata code one wishes to execute in parallel. It adds job-strings or header-strings. The header will be executed before each parallel job-string. Importantly, note that characters ~ and ; may not be used 
+	in code-strings because the program uses them internally to separate code lines and jobs when concatenating input strings. This does only apply to the direct code commands provided via input() - see Remark 3 below for a possible workaround.
 
 Options
 	input(string)       specifies the job or header string to be added.
@@ -36,7 +37,9 @@ Example
 	Remarks:
 	1) The preserve command is needed to ensure the header string remains available
 	2) The option continuejob ensure to add an additional line of code to the current job.
-	3) Importantly, note that characters ~ and ; may not be used in code strings because the program uses them internally to separate code lines and jobs when concatenating input strings. This does only apply to the direct code commands provided via input(). Programs or do-files that are called within the header or within a job are not subject to this restriction. If you need to use these characters, you can write a wrapper program or do-file that is called via the input strings.
+	3) Importantly, note that characters ~ and ; may not be used in code strings because the program uses them internally to separate code lines and jobs when concatenating input strings. 
+	   This does only apply to the direct code commands provided via input(). Programs or do-files that are called within the header or within a job are not subject to this restriction. 
+	   If you need to use these characters, you can write a wrapper program or do-file that is called via the input strings.
 	
 Author
 	Lukas Hack, ETH Zuerich
