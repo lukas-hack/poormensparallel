@@ -22,7 +22,7 @@ program define pmp_parse, rclass
 	
 	* Parse parallel string to discet different jobs
 	// di "`_parallel_string'"
-	tokenize "`_parallel_string'", parse("<")
+	tokenize "`_parallel_string'", parse(";")
 	
 	* Catch if too many jobs specified that violate loop range (loop range may be adjusted)
 	if "`100'" != "" {
@@ -31,14 +31,14 @@ program define pmp_parse, rclass
 	}
 	* Store each job in a new local 
 	forv i = 1(1)99 {
-		if "``i''" != "" & "``i''" != "<" {
+		if "``i''" != "" & "``i''" != ";" {
 			local jobcount = `jobcount' + 1
 			local job`jobcount' ``i''
 		}
 	}
 
 	* Read header and intialize do file
-	tokenize "`_header_string'", parse(">")	
+	tokenize "`_header_string'", parse("~")	
 	* Catch if too many header lines specified that violate loop range (loop range may be adjusted)
 	if "`100'" != "" {
 		di in red "more than 99 header lines are not allowed - stop parsing"
@@ -55,7 +55,7 @@ program define pmp_parse, rclass
 		* Exit loop when nothing to parse left
 		if ("``i''" == "") 	continue, break
 		* Write current line if not parse symbol
-		if ("``i''" != ">") file write textfile "``i''" _n _n
+		if ("``i''" != "~") file write textfile "``i''" _n _n
 		// Maybe rethink line above to handle strings with quotes or write in doc that not allowed		
 	}	
 	file write textfile "" _n _n
@@ -70,7 +70,7 @@ program define pmp_parse, rclass
 	forv i = 1(1)`jobcount' {	
 
 		* Parse do file for current job
-		tokenize "`job`i''" , parse(">")
+		tokenize "`job`i''" , parse("~")
 		
 		* Check that at most 99 lines
 		if "`100'" != "" {
@@ -88,7 +88,7 @@ program define pmp_parse, rclass
 			* Exit loop when nothing to parse left
 			if ("``j''" == "") continue, break
 			* Write current line if not parse symbol
-			if ("``j''" != ">") file write textfile "``j''" _n  					
+			if ("``j''" != "~") file write textfile "``j''" _n  					
 		}
 		* Parse end of job
 		file write textfile "}" _n _n
